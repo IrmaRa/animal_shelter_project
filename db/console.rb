@@ -13,6 +13,9 @@ owner2 = Owner.new({
   'preferences' => 'None'
   })
 
+owner1.save
+owner2.save
+
 animal1 = Animal.new({
   'name' => 'Alfie',
   'type' => 'Dog',

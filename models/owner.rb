@@ -11,4 +11,30 @@ class Owner
     @name = params['name']
     @preferences = params['preferences']
   end
+
+  def save()
+    sql = "
+    INSERT INTO owners (name, preferences)
+    VALUES ('#{@name}', '#{@preferences}')
+    RETURNING id;"
+
+    @id = SqlRunner.run(sql)[0]["id"].to_i
+  end
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 end
