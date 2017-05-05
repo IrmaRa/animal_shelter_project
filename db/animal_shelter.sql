@@ -4,7 +4,8 @@ DROP TABLE owners;
 
 CREATE TABLE owners (
   id SERIAL4 PRIMARY KEY,
-  name VARCHAR(255)
+  name VARCHAR(255),
+  preferences VARCHAR(255)
 );
 
 CREATE TABLE animals (

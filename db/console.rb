@@ -4,8 +4,14 @@ require_relative('../models/animal')
 require_relative('../models/adoption')
 
 
-owner1 = Owner.new({'name' => 'Kate'})
-owner2 = Owner.new({'name' => 'Fraser'})
+owner1 = Owner.new({
+  'name' => 'Kate',
+  'preferences' => 'Small size dog'
+  })
+owner2 = Owner.new({
+  'name' => 'Fraser',
+  'preferences' => 'None'
+  })
 
 animal1 = Animal.new({
   'name' => 'Alfie',
