@@ -4,13 +4,18 @@ require_relative('./models/animal')
 require_relative('./models/owner')
 
 get '/animals' do
-  @animals = Animal.all
+  @animals = Animal.all()
   erb(:index)
 end
 
 get '/animals/new' do
   @owners = Owner.all()
   erb(:new)
+end
+
+get '/animals/stories' do
+  @animals = Animal.all()
+  erb(:show)
 end
 
 post '/animals' do

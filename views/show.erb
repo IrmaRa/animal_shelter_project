@@ -1,0 +1,14 @@
+<h2>Animal Success Stories</h2>
+
+<% @animals.each() do |animal| if animal.adoption_case = true %>
+<div>
+ <h3><%= animal.name %></h3>
+ <img src="<%= animal.image_url %>"  />
+ <p> <%= animal.name  %> was adopted by <%= animal.owner.name  %></p> 
+</div>
+
+<hr/>
+</div>
+<% end %>
+<%end%>
+
