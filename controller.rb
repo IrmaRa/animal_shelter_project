@@ -18,6 +18,16 @@ get '/animals/stories' do
   erb(:show)
 end
 
+get '/animals/ready' do
+  @animals = Animal.all
+  erb(:show1)
+end
+
+get '/animals/not-ready' do
+  @animals = Animal.all
+  erb(:show2)
+end
+
 post '/animals' do
   @animal = Animal.new(params)
   @animal.save()

@@ -1,0 +1,16 @@
+<h2>Animals not ready for adoption</h2>
+
+<% @animals.each() do |animal| if animal.adoption_case == "No" %>
+<div>
+ <h3><%= animal.name %></h3>
+ <img src="<%= animal.image_url %>"  />
+ <p>Breed: <%= animal.breed.capitalize %> </p>  
+ <p>Age: <%= animal.age %> </p>
+ <p>Sex: <%= animal.sex %> </p> 
+ <p>Admission Date: <%= animal.admission_date %> </p> 
+</div>
+
+<hr/>
+</div>
+<% end %>
+<%end%>

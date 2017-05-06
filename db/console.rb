@@ -39,7 +39,7 @@ animal1 = Animal.new({
   'age' => '3 years',
   'image_url' => 'https://www.hirerush.com/blog/wp-content/uploads/2016/02/myths-about-rescue-dogs.jpg',
   'admission_date' => '2017-02-12',
-  'adoption_case' => true,
+  'adoption_case' => "Yes",
   'owner_id' => owner2.id
 })
 
@@ -51,8 +51,8 @@ animal2 = Animal.new({
   'age' => '5 months',
   'image_url' => 'https://www.petfinder.com/wp-content/uploads/2012/11/155293403-cat-adoption-checklist-632x475-e1354290788940.jpg',
   'admission_date' => '2017-04-01',
-  'adoption_case' => false,
-  'owner_id' => owner3.id
+  'adoption_case' => "No",
+  'owner_id' => owner1.id
 })
 
 animal3 = Animal.new({
@@ -63,8 +63,8 @@ animal3 = Animal.new({
   'age' => '7 years',
   'image_url' => 'http://y.delfi.lt/norm/46749/1546975_7uGP9J.jpeg',
   'admission_date' => '2017-03-10',
-  'adoption_case' => true,
-  'owner_id' => owner3.id
+  'adoption_case' => "Yes",
+  'owner_id' => owner1.id
 })
 
 animal1.save()
