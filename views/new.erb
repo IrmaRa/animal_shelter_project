@@ -52,7 +52,7 @@
    <option value="False">No</option>
  </select>
 
- <label for="owner-select">Select Potential Owner:</label>
+ <label for="owner-select">Select Potential or New Owner:</label>
  <select id="owner-select" name ="owner_id">
   <% @owners.each do |owner| %>
   <option value=<%=owner.id%> ><%=owner.preferences%></option>

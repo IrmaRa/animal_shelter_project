@@ -11,7 +11,12 @@ owner1 = Owner.new({
   })
 owner2 = Owner.new({
   'name' => 'Fraser',
-  'preferences' => 'None'
+  'preferences' => 'Looking for both(cat and dog)'
+  })
+
+owner3 = Owner.new({
+  'name' => 'Edinburgh Animal Sanctuary',
+  'preferences' => 'none'
   })
 
 owner1.save()
