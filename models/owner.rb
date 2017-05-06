@@ -21,7 +21,17 @@ class Owner
     @id = SqlRunner.run(sql)[0]["id"].to_i
   end
 
-  
+  def Owner.all()
+    sql = "SELECT * FROM owners;"
+    owner_hashes = SqlRunner.run(sql)
+    owner_objects = owner_hashes.map do
+      |owner_hash| Owner.new(owner_hash)
+    end
+    return owner_objects
+  end
+
+
+
 
 
 
