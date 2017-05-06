@@ -21,6 +21,15 @@ class Owner
     @id = SqlRunner.run(sql)[0]["id"].to_i
   end
 
+  def update()
+    sql = "
+    UPDATE owners SET
+    (name) = ('#{@name}'),
+    (preferences) = ('#{@preferences}')
+    WHERE id = #{@id};"
+    SqlRunner.run(sql)
+  end
+
   def Owner.find(id)
     sql = "SELECT * FROM owners
     WHERE id = #{id};"
