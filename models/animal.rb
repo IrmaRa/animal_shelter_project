@@ -26,6 +26,20 @@ class Animal
     @id = SqlRunner.run(sql)[0]["id"].to_i
   end
 
+  def update()
+    sql = "
+    UPDATE animals SET
+    (name) = ('#{@name}'),
+    (type) = ('#{@type}'),
+    (admission_date) = ('#{@admission_date}'),
+    (owner_id) = (#{@owner_id}),
+    (age) = (#{@age}),
+    (image_url) = ('#{@image_url}'),
+    (adoption_case) = ('#{@adoption_case}')
+    WHERE id = #{@id};"
+    SqlRunner.run(sql)
+  end
+
   def Animal.find(id)
     sql = "SELECT * FROM animals
     WHERE id = #{id};"
