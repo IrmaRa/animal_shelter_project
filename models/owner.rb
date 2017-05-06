@@ -58,23 +58,4 @@ class Owner
     return owner_objects
   end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 end

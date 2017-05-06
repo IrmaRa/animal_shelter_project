@@ -54,6 +54,14 @@ class Animal
     SqlRunner.run(sql)
   end
 
+  def owner()
+    sql = "SELECT * FROM owners
+    WHERE id = #{@owner_id};"
+    owner = SqlRunner.run(sql)
+    result = Owner.new(owner.first)
+    return result
+  end
+
   def Animal.delete_all()
     sql = "DELETE FROM animals;"
     SqlRunner.run(sql)
@@ -67,7 +75,5 @@ class Animal
     end
     return animal_objects
   end
-
-
 
 end
