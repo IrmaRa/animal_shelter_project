@@ -26,6 +26,14 @@ class Animal
     @id = SqlRunner.run(sql)[0]["id"].to_i
   end
 
+  def Animal.find(id)
+    sql = "SELECT * FROM animals
+    WHERE id = #{id};"
+    results = SqlRunner.run(sql)
+    animal = Animal.new(results.first)
+    return animal
+  end
+
   def Animal.delete_all()
     sql = "DELETE FROM animals;"
     SqlRunner.run(sql)
