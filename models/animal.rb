@@ -11,16 +11,16 @@ class Animal
     @name = params['name']
     @type = params['type']
     @admission_date = params['admission_date']
-    @owner_id = params['owner_id'].to_i
     @age = params['age'].to_i
     @image_url = params['image_url']
     @adoption_case = params['adoption_case']
+    @owner_id = params['owner_id'].to_i
   end
 
   def save()
     sql = "
-    INSERT INTO animals (name, type, admission_date, owner_id, age, image_url, adoption_case)
-    VALUES ('#{@name}', '#{@type}', '#{@admission_date}', #{@owner_id}, #{@age}, '#{@image_url}', '#{@adoption_case}')
+    INSERT INTO animals (name, type, admission_date, age, image_url, adoption_case, owner_id)
+    VALUES ('#{@name}', '#{@type}', '#{@admission_date}', #{@age}, '#{@image_url}', '#{@adoption_case}', #{@owner_id})
     RETURNING id;"
 
     @id = SqlRunner.run(sql)[0]["id"].to_i
@@ -32,10 +32,10 @@ class Animal
     (name) = ('#{@name}'),
     (type) = ('#{@type}'),
     (admission_date) = ('#{@admission_date}'),
-    (owner_id) = (#{@owner_id}),
     (age) = (#{@age}),
     (image_url) = ('#{@image_url}'),
-    (adoption_case) = ('#{@adoption_case}')
+    (adoption_case) = ('#{@adoption_case}'),
+    (owner_id) = (#{@owner_id})
     WHERE id = #{@id};"
     SqlRunner.run(sql)
   end

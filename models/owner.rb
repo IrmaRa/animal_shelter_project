@@ -44,6 +44,16 @@ class Owner
     SqlRunner.run(sql)
   end
 
+  def animals()
+    sql = "SELECT * FROM animals
+    WHERE owner_id = #{@id};"
+    animals = SqlRunner.run(sql)
+    result = animals.map { 
+      |animal| Animal.new(animal)
+    }
+    return result
+  end
+
   def Owner.delete_all()
     sql = "DELETE FROM owners;"
     SqlRunner.run(sql)
