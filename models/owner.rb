@@ -21,6 +21,11 @@ class Owner
     @id = SqlRunner.run(sql)[0]["id"].to_i
   end
 
+  def Owner.delete_all()
+    sql = "DELETE FROM owners;"
+    SqlRunner.run(sql)
+  end
+
   def Owner.all()
     sql = "SELECT * FROM owners;"
     owner_hashes = SqlRunner.run(sql)
@@ -29,6 +34,8 @@ class Owner
     end
     return owner_objects
   end
+
+
 
 
 

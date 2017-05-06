@@ -26,6 +26,20 @@ class Animal
     @id = SqlRunner.run(sql)[0]["id"].to_i
   end
 
+  def Animal.delete_all()
+    sql = "DELETE FROM animals;"
+    SqlRunner.run(sql)
+  end
+
+  def Animal.all()
+    sql = "SELECT * FROM animals;"
+    animal_hashes = SqlRunner.run(sql)
+    animal_objects = animal_hashes.map do
+      |animal_hash| Animal.new(animal_hash)
+    end
+    return animal_objects
+  end
+
 
 
 end
