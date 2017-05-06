@@ -14,7 +14,7 @@ CREATE TABLE animals (
   type VARCHAR(255),
   breed VARCHAR(255),
   sex VARCHAR(255),
-  age INT2,
+  age VARCHAR(255),
   image_url VARCHAR(255),
   admission_date DATE,
   adoption_case BOOLEAN,

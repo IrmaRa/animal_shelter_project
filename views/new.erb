@@ -6,32 +6,58 @@
   id="name-field"
   />
 
-  <label for="image-url-field">Image Url:</label>
-  <input 
-  type="text" 
-  name="image_url" 
-  id="image-url-field"
-  />
+  <label for="type-field">Type:</label> 
+  <select name="type" id="type-selection">
+   <option value="Dog">Dog</option>
+   <option value="Cat">Cat</option>
+ </select>
 
-  <label for="breed-field">Breed:</label>
-  <input 
-  type="text" 
-  name="breed" 
-  id="breed-field"
-  />
+ <label for="breed-field">Breed:</label> 
+ <input
+ breed="text"
+ name="breed"
+ id="breed-field"
+ />
+ <label for="sex-selection">Select sex:</label>
+ <select name="sex" id="sex-selection">
+   <option value="Male">Male</option>
+   <option value="Female">Female</option>
+ </select>
 
-  <label for="age-field">Age:</label>
-  <input 
-  type="number" 
-  name="age" 
-  id="age-field"
-  />
 
-  <label for="sex-selection">Select sex:</label>
-  <select name="sex" id="sex-selection">
-    <option value="Male">Male</option>
-    <option value="Female">Female</option>
-  </select>
+ <label for="age-field">Age:</label>
+ <input 
+ type="text" 
+ name="age" 
+ id="age-field"
+ />
+
+ <label for="image-url-field">Image Url:</label>
+ <input 
+ type="text" 
+ name="image_url" 
+ id="image-url-field"
+ />
+
+ <label for="admission-date-field">Admission Date yyyy/mm/dd:</label>
+ <input 
+ type="data" 
+ name="admission_date" 
+ id="admission-date-field"
+ />
+
+ <label for="adoption-selection">Is it currently adoptable?</label>
+ <select name="adoption_case" id="adoption-selection">
+   <option value="True">Yes</option>
+   <option value="False">No</option>
+ </select>
+
+ <label for="owner-select">Select Potential Owner:</label>
+ <select id="owner-select" name ="owner_id">
+  <% @owners.each do |owner| %>
+  <option value=<%=owner.id%> ><%=owner.preferences%></option>
+  <%end%>
+</select>
 
 <input type="submit" value="Add animal">
 </form>

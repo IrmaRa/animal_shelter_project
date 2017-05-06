@@ -13,7 +13,7 @@ class Animal
     @breed = params['breed']
     @sex = params['sex']
     @admission_date = params['admission_date']
-    @age = params['age'].to_i
+    @age = params['age']
     @image_url = params['image_url']
     @adoption_case = params['adoption_case']
     @owner_id = params['owner_id'].to_i
@@ -22,7 +22,7 @@ class Animal
   def save()
     sql = "
     INSERT INTO animals (name, type, breed, sex, admission_date, age, image_url, adoption_case, owner_id)
-    VALUES ('#{@name}', '#{@type}', '#{@breed}', '#{@sex}', '#{@admission_date}', #{@age}, '#{@image_url}', '#{@adoption_case}', #{@owner_id})
+    VALUES ('#{@name}', '#{@type}', '#{@breed}', '#{@sex}', '#{@admission_date}', '#{@age}', '#{@image_url}', '#{@adoption_case}', #{@owner_id})
     RETURNING id;"
 
     @id = SqlRunner.run(sql)[0]["id"].to_i
@@ -36,7 +36,7 @@ class Animal
     (breed) = ('#{@breed}'),
     (sex) = ('#{@sex}'),
     (admission_date) = ('#{@admission_date}'),
-    (age) = (#{@age}),
+    (age) = ('#{@age}'),
     (image_url) = ('#{@image_url}'),
     (adoption_case) = ('#{@adoption_case}'),
     (owner_id) = (#{@owner_id})
