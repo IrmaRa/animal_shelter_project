@@ -1,17 +1,19 @@
 <h3><a href="/animals">Home page</a></h3>
 
-<form method="post" action="/animals">
+<form method="post" action="/animals/<%= @animal.id %>">
+
   <label for="name-field">Name:</label> 
   <input
   type="text"
   name="name"
   id="name-field"
+  value="<%= @animal.name %>"
   />
 
   <label for="type-field">Type:</label> 
   <select name="type" id="type-selection">
-   <option value="Dog">Dog</option>
-   <option value="Cat">Cat</option>
+   <option value="Dog" <%= 'selected' if @animal.type == "Dog"%>> Dog</option>
+   <option value="Cat" <%= 'selected' if @animal.type == "Cat"%>> Cat</option>
  </select>
 
  <label for="breed-field">Breed:</label> 
@@ -19,11 +21,13 @@
  breed="text"
  name="breed"
  id="breed-field"
+ value="<%= @animal.breed %>"
  />
+
  <label for="sex-selection">Select sex:</label>
  <select name="sex" id="sex-selection">
-   <option value="Male">Male</option>
-   <option value="Female">Female</option>
+   <option value="Male" <%= 'selected' if @animal.sex == "Male"%>> Male</option>
+   <option value="Female" <%= 'selected' if @animal.sex == "Female"%>> Female</option>
  </select>
 
  <label for="age-field">Age:</label>
@@ -31,6 +35,7 @@
  type="text" 
  name="age" 
  id="age-field"
+ value="<%= @animal.age %>"
  />
 
  <label for="image-url-field">Image Url:</label>
@@ -38,6 +43,7 @@
  type="text" 
  name="image_url" 
  id="image-url-field"
+ value="<%= @animal.image_url %>"
  />
 
  <label for="admission-date-field">Admission Date yyyy/mm/dd:</label>
@@ -45,25 +51,25 @@
  type="data" 
  name="admission_date" 
  id="admission-date-field"
+ value="<%= @animal.admission_date %>"
  />
 
  <label for="adoption-selection">Is it currently adoptable?</label>
  <select name="adoption_case" id="adoption-selection">
-   <option value="Yes">Yes</option>
-   <option value="No">No</option>
+   <option value="Yes" <%= 'selected' if @animal.adoption_case == "Yes"%>> Yes</option>
+   <option value="No" <%= 'selected' if @animal.adoption_case == "No"%>> No</option>
  </select>
 
  <label for="owner-select">Select Potential Owner:</label>
  <select id="owner-select" name ="owner_id">
-  <% @owners.each do |owner| %>
-  <option value=<%=owner.id%> >
-  <%=owner.name%> |
-  <%=owner.preferences%> |
-  <%=owner.animals.count%>
-  </option>
-  <%end%>
+   <% @owners.each do |owner| %>
+   <option value=<%=owner.id%> <%= 'selected' if @animal.owner_id == owner.name %>>
+     <%=owner.name%> |
+     <%=owner.preferences%> |
+     <%=owner.animals.count%>
+   </option>
+   <%end%>
+ </select>
 
-</select>
-
-<input type="submit" value="Add animal">
+ <input type="submit" value="Update">
 </form>
