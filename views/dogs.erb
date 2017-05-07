@@ -1,0 +1,16 @@
+<div> <% @animals.each do |animal| %>
+ <div>
+   <h3><%= animal.name %></div></h3>
+   <img src="<%= animal.image_url %>"  />
+   <p>Breed: <%= animal.breed.capitalize %> </p>  
+   <p>Age: <%= animal.age %> </p>
+   <p>Sex: <%= animal.sex %> </p> 
+   <p>Admission Date: <%= animal.admission_date %> </p> 
+ </div>
+
+ <hr/>
+
+ <% end %>
+
+</div>
+

@@ -5,6 +5,9 @@
 <h3><a href="/animals/new">Add animal</a></h3>   
 <h3><a href="/animals/ready">Animals ready for adoption</a></h3>
 <h3><a href="/animals/not-ready">Animals in training/vet care</a></h3>
+<h4>Search by type</h4>
+<h3><a href="/animals/dogs">Dogs</a></h3>
+<h3><a href="/animals/cats">Cats</a></h3>
 
 
 <div> <% @animals.each do |animal| %>
@@ -23,7 +26,7 @@
 
 </div>
 
-<form method="post" action="/animals/type">
+<!-- <form method="get" action="/animals/type">
  <label for="search-field">Type:</label> 
  <select name="type" id="type-selection">
   <option value="Dog">Dog</option>
@@ -31,4 +34,4 @@
 </select>
 
 <input type="submit" value="Search">
-</form>
+</form> -->

@@ -15,22 +15,27 @@ end
 
 get '/animals/stories' do
   @animals = Animal.all()
-  erb(:show)
+  erb(:stories)
 end
 
 get '/animals/ready' do
   @animals = Animal.all
-  erb(:show1)
+  erb(:ready)
 end
 
 get '/animals/not-ready' do
   @animals = Animal.all
-  erb(:show2)
+  erb(:not_ready)
 end
 
-get '/animals/type' do
-  @animals = Animal.all
-  erb(:show3)
+get '/animals/dogs' do
+  @animals = Animal.search_type('Dog')
+  erb(:dogs)
+end
+
+get '/animals/cats' do
+  @animals = Animal.search_type('Cat')
+  erb(:cats)
 end
 
 post '/animals' do

@@ -52,13 +52,11 @@ class Animal
     return animal
   end
 
-
   def Animal.search_type(type)
     sql = "SELECT * FROM animals 
-    WHERE animals.type = '#{type}';"
+    WHERE type = '#{type}';"
     return Animal.get_many(sql)
   end
-
 
   def delete()
     sql = "DELETE FROM animals
