@@ -56,13 +56,9 @@ class Animal
   def Animal.search_type(type)
     sql = "SELECT * FROM animals 
     WHERE animals.type = '#{type}';"
-    animal_hashes = SqlRunner.run(sql)
-    animal_objects = animal_hashes.map do
-      |animal_hash| Animal.new(animal_hash)
-    end
-    return animal_objects
+    return Animal.get_many(sql)
   end
-  
+
 
   def delete()
     sql = "DELETE FROM animals
@@ -85,11 +81,13 @@ class Animal
 
   def Animal.all()
     sql = "SELECT * FROM animals;"
-    animal_hashes = SqlRunner.run(sql)
-    animal_objects = animal_hashes.map do
-      |animal_hash| Animal.new(animal_hash)
-    end
-    return animal_objects
+    return Animal.get_many(sql)
+  end
+
+  def Animal.get_many(sql)
+    animals = SqlRunner.run(sql)
+    return animals.map { |animal| Animal.new(animal)
+    }
   end
 
 end
