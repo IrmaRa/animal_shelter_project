@@ -56,6 +56,8 @@ get '/animals/:id/edit' do
 end
 
 post '/animals/:id' do
-  Animal.new(params).update
-  redirect to '/animals'
+  @animal = Animal.new(params).update
+  @animal = Animal.find(params[:id])
+  erb(:update)
 end
+
