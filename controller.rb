@@ -29,17 +29,32 @@ get '/animals/not-ready' do
 end
 
 get '/animals/dogs' do
-  @animals = Animal.search_type('Dog')
+  @animals = Animal.find_type('Dog')
   erb(:dogs)
 end
 
 get '/animals/cats' do
-  @animals = Animal.search_type('Cat')
+  @animals = Animal.find_type('Cat')
   erb(:cats)
+end
+
+get '/animals/:id' do
+  @animal = Animal.find(params[:id])
+  erb(:show)
 end
 
 post '/animals' do
   @animal = Animal.new(params)
   @animal.save()
   erb(:create)
+end
+
+get '/animals/:id' do
+  @animal = Animal.find(params[:id])
+  erb(:show)
+end
+
+get '/animals/:id/edit' do
+  @animal = Animal.find(params[:id])
+  erb(:edit)
 end

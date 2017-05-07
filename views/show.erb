@@ -1,0 +1,12 @@
+<div>
+ <h3><%= @animal.name %></div></h3>
+ <img src="<%= @animal.image_url %>" />
+ <p>Admission Date: <%= @animal.admission_date %></p> 
+ <p>Breed: <%= @animal.breed.capitalize %></p>  
+ <p>Age: <%= @animal.age %> </p>
+ <p>Sex: <%= @animal.sex %> </p>
+ <p>Ready for adoption: <%= @animal.adoption_case %></p> 
+ <p>Current owner: <%= @animal.owner.name  %></p> 
+</div>
+
+<hr/>

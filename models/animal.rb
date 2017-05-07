@@ -52,7 +52,7 @@ class Animal
     return animal
   end
 
-  def Animal.search_type(type)
+  def Animal.find_type(type)
     sql = "SELECT * FROM animals 
     WHERE type = '#{type}';"
     return Animal.get_many(sql)
