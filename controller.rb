@@ -28,6 +28,11 @@ get '/animals/not-ready' do
   erb(:show2)
 end
 
+get '/animals/type' do
+  @animals = Animal.all
+  erb(:show3)
+end
+
 post '/animals' do
   @animal = Animal.new(params)
   @animal.save()

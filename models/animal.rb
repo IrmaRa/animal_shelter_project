@@ -52,6 +52,18 @@ class Animal
     return animal
   end
 
+
+  def Animal.search_type(type)
+    sql = "SELECT * FROM animals 
+    WHERE animals.type = '#{type}';"
+    animal_hashes = SqlRunner.run(sql)
+    animal_objects = animal_hashes.map do
+      |animal_hash| Animal.new(animal_hash)
+    end
+    return animal_objects
+  end
+  
+
   def delete()
     sql = "DELETE FROM animals
     WHERE id = #{@id};"
