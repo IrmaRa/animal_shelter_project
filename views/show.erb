@@ -10,3 +10,10 @@
 </div>
 
 <hr/>
+
+<form action="/animals/<%= @animal.id %>/edit" method="get">
+<input type="submit" value="edit">
+</form>
+<form action="/animals/<%= @animal.id %>/delete" method="post">
+<input type="submit" value="delete">
+</form>
