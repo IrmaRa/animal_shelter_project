@@ -19,13 +19,23 @@ get '/animals/stories' do
 end
 
 get '/animals/ready' do
-  @animals = Animal.all
+  animals = Animal.all
+  @result = []
+  animals.each() do |animal| if animal.adoption_case == "Yes" && animal.owner.name == "Edinburgh Animal Sanctuary"
+    @result << animal
+   end
+  end
   erb(:ready)
 end
 
 get '/animals/not-ready' do
-  @animals = Animal.all
-  erb(:not_ready)
+  animals = Animal.all
+  @result = []
+  animals.each() do |animal| if animal.adoption_case == "No"
+   @result << animal
+ end
+end
+  erb(:ready)
 end
 
 get '/animals/dogs' do
@@ -38,15 +48,19 @@ get '/animals/cats' do
   erb(:cats)
 end
 
-get '/animals/:id' do
-  @animal = Animal.find(params[:id])
-  erb(:show)
+post '/animals/type' do 
+  redirect to "/animals/#{params['type']}"
 end
 
 post '/animals' do
   @animal = Animal.new(params)
   @animal.save()
   erb(:create)
+end
+
+get '/animals/:id' do
+  @animal = Animal.find(params[:id])
+  erb(:show)
 end
 
 get '/animals/:id/edit' do

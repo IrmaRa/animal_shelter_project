@@ -1,6 +1,5 @@
-<h2>Animals ready for adoption</h2>
 
-<% @animals.each() do |animal| if animal.adoption_case == "Yes" && animal.owner.name == "Edinburgh Animal Sanctuary" %>
+<% @result.each do |animal|  %>
 <div>
  <h3><%= animal.name %></h3>
  <img src="<%= animal.image_url %>"  />
@@ -13,4 +12,3 @@
 <hr/>
 </div>
 <% end %>
-<%end%>

@@ -75,7 +75,7 @@ animal3 = Animal.new({
 
 animal4 = Animal.new({
   'name' => 'Oreo',
-  'type' => 'Dog',
+  'type' => 'Cat',
   'breed' => 'British Shorthair',
   'sex' => 'Male',
   'age' => '4 months',

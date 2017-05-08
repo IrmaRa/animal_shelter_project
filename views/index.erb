@@ -6,8 +6,15 @@
 <h3><a href="/animals/ready">Animals ready for adoption</a></h3>
 <h3><a href="/animals/not-ready">Animals in training/vet care</a></h3>
 <h4>Search by type</h4>
-<h3><a href="/animals/dogs">Dogs</a></h3>
-<h3><a href="/animals/cats">Cats</a></h3>
+<form method="post" action="/animals/type">
+ <label for="search-field">Type:</label> 
+ <select name="type" id="type-selection">
+  <option value="dogs">Dog</option>
+  <option value="cats">Cat</option>
+</select>
+
+<input type="submit" value="Search">
+</form>
 
 
 <div> <% @animals.each do |animal| %>
@@ -24,12 +31,3 @@
 
 </div>
 
-<!-- <form method="get" action="/animals/type">
- <label for="search-field">Type:</label> 
- <select name="type" id="type-selection">
-  <option value="Dog">Dog</option>
-  <option value="Cat">Cat</option>
-</select>
-
-<input type="submit" value="Search">
-</form> -->
