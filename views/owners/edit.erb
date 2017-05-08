@@ -1,4 +1,4 @@
-<form method="post" action="/owners<%= @owner.id %>">
+<form method="post" action="/owners/<%= @owner.id %>">
 
   <label for="name-field">Name:</label> 
   <input
@@ -11,10 +11,10 @@
   <label for="preferences-field">Animal preferences:</label> 
   <input
   type="text"
-  preferences="preferences"
+  name="preferences"
   id="preferences-field"
   value="<%= @owner.preferences %>"
   />
 
-   <input type="submit" value="Update">
-  </form>
+  <input type="submit" value="Update">
+</form>
