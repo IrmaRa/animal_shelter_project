@@ -88,4 +88,24 @@ class Animal
     }
   end
 
+  def Animal.ready()
+    animals = Animal.all
+    result = []
+    animals.each() do |animal| if animal.adoption_case == "Yes" && animal.owner.name == "Edinburgh Animal Sanctuary"
+      result << animal
+     end
+    end
+    return result
+  end
+
+  def Animal.unready()
+    animals = Animal.all
+    result = []
+    animals.each() do |animal| if animal.adoption_case == "No"
+     result << animal
+     end
+    end
+    return result
+  end
+
 end

@@ -19,22 +19,12 @@ get '/animals/stories' do
 end
 
 get '/animals/ready' do
-  animals = Animal.all
-  @result = []
-  animals.each() do |animal| if animal.adoption_case == "Yes" && animal.owner.name == "Edinburgh Animal Sanctuary"
-    @result << animal
-   end
-  end
+   @animals = Animal.ready()
   erb(:ready)
 end
 
-get '/animals/not-ready' do
-  animals = Animal.all
-  @result = []
-  animals.each() do |animal| if animal.adoption_case == "No"
-   @result << animal
- end
-end
+get '/animals/unready' do
+  @animals = Animal.unready()
   erb(:ready)
 end
 
