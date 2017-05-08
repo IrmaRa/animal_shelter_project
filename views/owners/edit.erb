@@ -1,0 +1,20 @@
+<form method="post" action="/owners<%= @owner.id %>">
+
+  <label for="name-field">Name:</label> 
+  <input
+  type="text"
+  name="name"
+  id="name-field"
+  value="<%= @owner.name %>"
+  />
+
+  <label for="preferences-field">Animal preferences:</label> 
+  <input
+  type="text"
+  preferences="preferences"
+  id="preferences-field"
+  value="<%= @owner.preferences %>"
+  />
+
+   <input type="submit" value="Update">
+  </form>

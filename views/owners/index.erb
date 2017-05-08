@@ -1,7 +1,17 @@
-<div> <% @owners.each do |owner| if owner.name != "Edinburgh Animal Sanctuary"%>
-   <p>Name: <%= owner.name %></p>
-   <p>Animal preferences: <%= owner.preferences %></p> 
+<div> 
+
+  <% @owners.each do |owner| if owner.name != "Edinburgh Animal Sanctuary"%>
+  <p>Name: <%= owner.name %></p>
+  <p>Animal preferences: <%= owner.preferences %></p> 
+  <form action="/owners/<%= owner.id %>/edit" method="get">
+   <input type="submit" value="edit">
+ </form>
+ <form action="/owners/<%= owner.id %>/delete" method="post">
+   <input type="submit" value="delete">
+ </form>
  <% end %>
  <% end %>
 
 </div>
+
+
