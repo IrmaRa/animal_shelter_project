@@ -12,16 +12,4 @@
 </nav>
 
 
-<div> <% @animals.each do |animal| %>
- <div class="animal-with-image">
-   <h3 id="animal-name"><%= animal.name.capitalize %></h3>
-   <img src="<%= animal.image_url %>"  />
-   <p>Admission Date: <%= animal.admission_date %> </p> 
-   <p><a id="more-details" href="/animals/<%= animal.id %>">More details</a></p>
- </div>
-
-
- <% end %>
-
-</div>
 
