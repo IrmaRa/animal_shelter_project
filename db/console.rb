@@ -46,6 +46,7 @@ animal1 = Animal.new({
   'image_url' => 'https://www.hirerush.com/blog/wp-content/uploads/2016/02/myths-about-rescue-dogs.jpg',
   'admission_date' => '2017-02-12',
   'adoption_case' => "Yes",
+  'adoption_date' => '2017-05-07',
   'owner_id' => owner2.id
 })
 
@@ -58,6 +59,7 @@ animal2 = Animal.new({
   'image_url' => 'https://www.petfinder.com/wp-content/uploads/2012/11/155293403-cat-adoption-checklist-632x475-e1354290788940.jpg',
   'admission_date' => '2017-04-01',
   'adoption_case' => "No",
+  'adoption_date' => '2017-05-07',
   'owner_id' => owner1.id
 })
 
@@ -70,6 +72,7 @@ animal3 = Animal.new({
   'image_url' => 'http://y.delfi.lt/norm/46749/1546975_7uGP9J.jpeg',
   'admission_date' => '2017-03-10',
   'adoption_case' => "Yes",
+  'adoption_date' => '2017-05-07',
   'owner_id' => owner1.id
 })
 
@@ -82,6 +85,7 @@ animal4 = Animal.new({
   'image_url' => 'http://www.rd.com/wp-content/uploads/sites/2/2016/04/01-cat-wants-to-tell-you-laptop.jpg',
   'admission_date' => '2017-05-02',
   'adoption_case' => "Yes",
+  'adoption_date' => '2017-05-07',
   'owner_id' => owner1.id
 })
 

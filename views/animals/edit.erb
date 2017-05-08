@@ -69,5 +69,13 @@
    <%end%>
  </select>
 
+ <label for="adoption-date-field">Adoption Date:</label>
+ <input 
+ type="date" 
+ name="adoption_date" 
+ id="adoption-date-field"
+ value="<%= @animal.adoption_date %>"
+ />
+
  <input type="submit" value="Update">
 </form>
