@@ -28,18 +28,9 @@ get '/animals/unready' do
   erb(:ready)
 end
 
-get '/animals/dogs' do
-  @animals = Animal.find_type('Dog')
-  erb(:dogs)
-end
-
-get '/animals/cats' do
-  @animals = Animal.find_type('Cat')
-  erb(:cats)
-end
-
-post '/animals/type' do 
-  redirect to "/animals/#{params['type']}"
+get '/animals/type' do 
+  @animals = Animal.find_type(params['type'])
+  erb(:type)
 end
 
 post '/animals' do

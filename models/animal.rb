@@ -82,12 +82,6 @@ class Animal
     return Animal.get_many(sql)
   end
 
-  def Animal.get_many(sql)
-    animals = SqlRunner.run(sql)
-    return animals.map { |animal| Animal.new(animal)
-    }
-  end
-
   def Animal.ready()
     animals = Animal.all
     result = []
@@ -106,6 +100,12 @@ class Animal
      end
     end
     return result
+  end
+
+  def Animal.get_many(sql)
+    animals = SqlRunner.run(sql)
+    return animals.map { |animal| Animal.new(animal)
+    }
   end
 
 end
