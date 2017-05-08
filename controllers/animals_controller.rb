@@ -1,59 +1,55 @@
 require('sinatra')
 require('sinatra/contrib/all')
-require_relative('./models/animal')
-require_relative('./models/owner')
+require_relative('../models/animal')
+require_relative('../models/owner')
 
-get '/animals' do
-  @animals = Animal.all()
-  erb(:index)
-end
 
 get '/animals/new' do
   @owners = Owner.all()
-  erb(:new)
+  erb(:"animals/new")
 end
 
 get '/animals/stories' do
   @animals = Animal.all()
-  erb(:stories)
+  erb(:"animals/stories")
 end
 
 get '/animals/ready' do
    @animals = Animal.ready()
-  erb(:ready)
+  erb(:"animals/ready")
 end
 
 get '/animals/unready' do
   @animals = Animal.unready()
-  erb(:ready)
+  erb(:"animals/ready")
 end
 
 get '/animals/type' do 
   @animals = Animal.find_type(params['type'])
-  erb(:type)
+  erb(:"animals/type")
 end
 
 post '/animals' do
   @animal = Animal.new(params)
   @animal.save()
-  erb(:create)
+  erb(:"animals/create")
 end
 
 get '/animals/:id' do
   @animal = Animal.find(params[:id])
-  erb(:show)
+  erb(:"animals/show")
 end
 
 get '/animals/:id/edit' do
   @animal = Animal.find(params[:id])
   @owners = Owner.all()
-  erb(:edit)
+  erb(:"animals/edit")
 end
 
 post '/animals/:id' do
   @animal = Animal.new(params).update
   @animal = Animal.find(params[:id])
-  erb(:update)
+  erb(:"animals/update")
 end
 
 post '/animals/:id/delete' do
