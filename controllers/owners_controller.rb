@@ -7,3 +7,8 @@ get '/owners' do
   @owners = Owner.all()
   erb(:"owners/index")
 end
+
+get '/owners/new' do
+  @owners = Owner.all()
+  erb(:"owners/new")
+end

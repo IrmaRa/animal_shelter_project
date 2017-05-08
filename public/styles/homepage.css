@@ -34,11 +34,12 @@ a {
 
 ul#navigation {
   list-style-type: none;
-  padding: 0;
+  padding: 5px;
+  text-align: left;
 }
 
 ul#navigation li {
-  display: inline;
+  display: list-item;
   padding: 0 2.5em 0 0;
 }
 
@@ -50,7 +51,6 @@ ul#navigation li {
 
 .animal-with-image {
   width: 45%;
-  display: inline-block;
   text-align: center;
   border-width:thin;
   border-style:solid;
@@ -59,11 +59,16 @@ ul#navigation li {
 #animal-name {
   font-family: "Taviraj";
   font-size: 160%;
-  font-weight: bolder;
 }
 
 #search-block li {
   display: inline;
+} 
+
+#search-block {
+  text-align: left;
+  padding: 10px;
+  font-size: 120%;
 }
 
 #more-details {
