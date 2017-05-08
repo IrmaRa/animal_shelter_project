@@ -33,3 +33,9 @@ post '/owners/:id' do
   @owner = Owner.new(params).update
   redirect to '/owners'
 end
+
+post '/owners/:id/delete' do
+  owner = Owner.find(params[:id])
+  owner.delete()
+  redirect to '/owners'
+end
