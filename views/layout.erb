@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+  <meta charset="utf-8">
   <title>Edinburgh Animal Sanctuary</title>
   <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
-<header>
-  
-</header>
-<%= yield %>
+  <header>
+  </header>
+  <h2 id="title">All Animals of Edinburgh Sanctuary</h2>
+
+  <nav>
+    <ul id="navigation">
+      <li><a href="/animals">Home page</a></li>
+      <li><a href="/animals/ready">Animals ready for adoption</a></li>
+      <li><a href="/animals/unready">Animals in training/vet care</a></li>
+      <li><a href="/animals/stories">Success Stories</a></li>  
+      <li><a href="/animals/new">Add animal</a></li> 
+    </ul>
+  </nav>
+
+  <hr/>
+
+  <%= yield %>
 </body>
 </html>

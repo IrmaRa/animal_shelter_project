@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Taviraj');
-@import url('https://fonts.googleapis.com/css?family=Chewy');
-
 
 
 body {
@@ -31,13 +29,14 @@ a {
   color: #b35919;
   text-decoration-line: none;
   font-weight: bolder;
-  font-size: 140%;
+  font-size: 160%;
 }
 
 ul#navigation {
   list-style-type: none;
   padding: 0;
 }
+
 ul#navigation li {
   display: inline;
   padding: 0 2.5em 0 0;
@@ -58,6 +57,15 @@ ul#navigation li {
 }
 
 #animal-name {
-  font-family: "Chewy";
+  font-family: "Taviraj";
   font-size: 160%;
+  font-weight: bolder;
+}
+
+#search-block li {
+  display: inline;
+}
+
+#more-details {
+  font-size: 100%;
 }

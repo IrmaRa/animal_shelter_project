@@ -1,25 +1,15 @@
-<h2 id="title">All Animals of Edinburgh Sanctuary</h2>
-
 <nav>
-<ul id="navigation">
-<li><a href="/animals/stories">Success Stories</a></li>
-<li><a href="/animals/new">Add animal</a></li>   
-<li><a href="/animals/ready">Animals ready for adoption</a></li>
-<li><a href="/animals/unready">Animals in training/vet care</a></li>
-</ul>
-</nav>
-
-
-<h4>Search by type</h4>
-<form method="get" action="/animals/type" />
- <label for="search-field">Type:</label> 
- <select name="type" id="type-selection">
-  <option value="Dog">Dog</option>
-  <option value="Cat">Cat</option>
-</select>
-
-<input type="submit" value="Search">
+  <ul id="search-block">
+    <form method="get" action="/animals/type" />
+    <li><label for="search-field">Search by type:</label></li>
+    <li><select name="type" id="type-selection">
+      <option value="Dog">Dog</option>
+      <option value="Cat">Cat</option>
+    </select></li>
+    <li><input type="submit" value="Search"></li>
+  </ul>
 </form>
+</nav>
 
 
 <div> <% @animals.each do |animal| %>
@@ -27,7 +17,7 @@
    <h3 id="animal-name"><%= animal.name.capitalize %></h3>
    <img src="<%= animal.image_url %>"  />
    <p>Admission Date: <%= animal.admission_date %> </p> 
-   <p><a href="/animals/<%= animal.id %>">More details</a></p>
+   <p><a id="more-details" href="/animals/<%= animal.id %>">More details</a></p>
  </div>
 
 
