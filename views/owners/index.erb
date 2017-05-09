@@ -1,8 +1,11 @@
+<h1 class="page-title">List of Owners</h1>
+
 <div> 
 
   <% @owners.each do |owner| if owner.name != "Edinburgh Animal Sanctuary"%>
   <p>Name: <%= owner.name %></p>
   <p>Animal preferences: <%= owner.preferences %></p> 
+  <p>Current number of pets: <%= owner.animals.count %></p> 
   <form action="/owners/<%= owner.id %>/edit" method="get">
    <input type="submit" value="edit">
  </form>
@@ -12,6 +15,12 @@
  <% end %>
  <% end %>
 
+</div>
+
+<div>
+<ul>
+<li><a href="/owners/new">Add owner</a></li>
+</ul>
 </div>
 
 

@@ -1,11 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Taviraj');
-
-
-body {
-  font-family: "Taviraj";
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Cinzel+Decorative|GFS+Didot|Taviraj');
 
 header {
   position: fixed;
@@ -20,58 +13,72 @@ header {
   text-align: center;
 }
 
+.page-title {
+  font-family: "Didot"
+  font-weight: bolder;
+  font-size: 250%;
+  text-align: center;
+}
+
+.main-navigation {
+  padding: 5px;
+  text-align: center;
+  margin-top: 150px;
+  font-size: 120%;
+}
+
+.main-navigation li {
+  list-style-type: none;
+  color: black;
+  font-family: "Didot";
+  font-weight: lighter;
+  display: list-item;
+  padding: 0 2.5em 0 0;
+  background-color: #f1f1f1;
+}
+
+.nav-bars li {
+  display: inline;
+  color: #864313;
+  text-decoration-line: none;
+  font-size: 100%;
+  padding: 30px;
+  font-weight: lighter;
+  text-align: center;
+
+}
+
 img {
   width: 450px;
   height: 350px;
 }
 
-a {
-  color: #b35919;
-  text-decoration-line: none;
-  font-weight: bolder;
-  font-size: 160%;
-}
-
-ul#navigation {
-  list-style-type: none;
-  padding: 5px;
-  text-align: left;
-}
-
-ul#navigation li {
-  position: inline;
-  display: list-item;
-  padding: 0 2.5em 0 0;
-}
-
-#title {
-  margin-top: 150px;
-  font-family: "Abril Fatface";
-  font-size: 270%;
-}
-
 .animal-with-image {
+  position: inline;
   width: 45%;
   text-align: center;
-  border-width:thin;
-  border-style:solid;
+  border-width: thin;
+  border-style: solid;
 }
 
 #animal-name {
-  font-family: "Taviraj";
-  font-size: 160%;
+  font-family: "Didot"
+  font-size: 80%;
+}
+
+#search-block {
+  text-align: center;
+  padding: 10px;
+  font-size: 150%;
 }
 
 #search-block li {
   display: inline;
 } 
 
-#search-block {
-  text-align: left;
-  padding: 10px;
-  font-size: 120%;
-}
-
 #more-details {
-  font-size: 100%;
+  font-size: 80%;
+  border-width: thin;
+  border-style: solid;
+  background-color: #f1f1f1;
 }

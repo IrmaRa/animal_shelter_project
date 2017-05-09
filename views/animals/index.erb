@@ -1,3 +1,27 @@
+<div>
+<ul class="nav-bars">
+<li><a href="/animals/ready">Animals ready for adoption</a></li>
+<li><a href="/animals/unready">Animals in training/vet care</a></li>
+<li><a href="/animals/stories">Success Stories</a></li>  
+<li><a href="/animals/new">Add animal</a></li> 
+</ul>
+</div>
+
+<h1 class="page-title">All Animals of Edinburgh Sanctuary</h1>
+
+<nav>
+  <ul id="search-block">
+    <form method="get" action="/animals/type" />
+    <li><label for="search-field">Search by type:</label></li>
+    <li><select name="type" id="type-selection">
+      <option value="Dog">Dog</option>
+      <option value="Cat">Cat</option>
+    </select></li>
+    <li><input type="submit" value="Search"></li>
+  </ul>
+</form>
+</nav>
+
 <div> <% @animals.each do |animal| %>
  <div class="animal-with-image">
    <h3 id="animal-name"><%= animal.name.capitalize %></h3>
