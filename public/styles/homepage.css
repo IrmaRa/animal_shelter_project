@@ -16,7 +16,7 @@ header {
 .page-title {
   font-family: "Didot"
   font-weight: bolder;
-  font-size: 250%;
+  font-size: 230%;
   text-align: center;
 }
 
@@ -24,17 +24,22 @@ header {
   padding: 5px;
   text-align: center;
   margin-top: 150px;
-  font-size: 120%;
 }
 
 .main-navigation li {
-  list-style-type: none;
-  color: black;
-  font-family: "Didot";
-  font-weight: lighter;
+  list-style: none;
   display: list-item;
   padding: 0 2.5em 0 0;
   background-color: #f1f1f1;
+}
+
+.main-navigation a {
+  font-family: "Didot";
+  font-weight: lighter;
+  text-decoration: none;
+  color: black;
+  font-size: 200%;
+
 }
 
 .nav-bars li {
