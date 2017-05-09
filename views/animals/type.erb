@@ -1,15 +1,15 @@
 <div> <% @animals.each do |animal| %>
- <div>
-   <h3><%= animal.name %></div></h3>
-   <img src="<%= animal.image_url %>"  />
-   <p>Breed: <%= animal.breed %> </p>  
-   <p>Age: <%= animal.age %> </p>
-   <p>Sex: <%= animal.sex %> </p> 
-   <p>Admission Date: <%= animal.admission_date %> </p> 
- </div>
 
- <hr/>
-
+  <ul class="animal-with-image">
+  <li id="animal-name"><%= animal.name %></li>
+   <hr/>
+   <li><img src="<%= animal.image_url %>" /></li>
+   <hr/>
+   <li>Breed: <%= animal.breed %> </li>  
+   <li>Age: <%= animal.age %> </li>
+   <li>Sex: <%= animal.sex %> </li> 
+   <li>Admission Date: <%= animal.admission_date %> </li> 
+ </ul>
  <% end %>
 
 </div>
