@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Didot|Open+Sans|Roboto:100'|Dancing+Script);
 
-#form form {
+h2 {
+  font-family: "Didot";
+  font-style: italic;
+  text-align: center;
+  font-size: 150%;
+  font-weight: bolder;
+}
+
+.add-new form {
   font-family: "Roboto";
   width: 30%;
   margin-right: auto;
@@ -9,13 +17,14 @@
   display: list-item;
   border: double;
   background-color: #f1f1f1;
+  list-style: none;
 }
 
-#form form li {
+.add-new form li {
   padding: 0.4em 0 0 0;
 }
 
-#form select {
+.add-new select {
   height: 20px;
   background-color: white;
   width: 100%;
@@ -25,18 +34,15 @@
   border-radius: 4px;
 }
 
-#form input[type=text] {
-  width: 100%;
-  box-sizing: border-box;
+.add-new input[type=text] {
+  width: 99%;
   height: 30px;
-  
   font-size: 100%;
   color: #595959;
   border-radius: 4px;
-
 }
 
-#form input[type=date] {
+.add-new input[type=date] {
   width: 100%;
   height: 20px;
   font-size: 100%;
@@ -44,11 +50,9 @@
   border-radius: 4px;
 }
 
-
-#form input[type=submit] {
+.add-new input[type=submit] {
   border-radius: 4px;
   width: 100%;
-
   font-size: 90%;
   background-color: #333333;
   border: none;

@@ -1,19 +1,20 @@
 <div>
- <h3><%= @animal.name %></div></h3>
- <img src="<%= @animal.image_url %>" />
- <p>Admission Date: <%= @animal.admission_date %></p> 
- <p>Breed: <%= @animal.breed.capitalize %></p>  
- <p>Age: <%= @animal.age %> </p>
- <p>Sex: <%= @animal.sex %> </p>
- <p>Ready for adoption: <%= @animal.adoption_case %></p> 
- <p>Current owner: <%= @animal.owner.name  %></p> 
+<ul class="animal-with-image">
+ <li id="animal-name"><%= @animal.name %></li>
+ <li>Admission Date: <%= @animal.admission_date %></li> 
+ <li>Breed: <%= @animal.breed.capitalize %></li>  
+ <li>Age: <%= @animal.age %> </li>
+ <li>Sex: <%= @animal.sex %> </li>
+ <li>Ready for adoption: <%= @animal.adoption_case %></li> 
+ <li>Current owner: <%= @animal.owner.name  %></li> 
+ <hr/>
+ <li><img id="show-image" src="<%= @animal.image_url %>" /></li>
+ <hr/>
+ <li><form class="edit-delete"action="/animals/<%= @animal.id %>/edit" method="get">
+ <input type="submit" value="edit">
+ </form >
+ <form class="edit-delete" action="/animals/<%= @animal.id %>/delete" method="post">
+ <input type="submit" value="delete">
+ </form></li>
+</ul>
 </div>
-
-<hr/>
-
-<form action="/animals/<%= @animal.id %>/edit" method="get">
-<input type="submit" value="edit">
-</form>
-<form action="/animals/<%= @animal.id %>/delete" method="post">
-<input type="submit" value="delete">
-</form>
