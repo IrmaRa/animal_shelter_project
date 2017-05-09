@@ -34,6 +34,7 @@ get '/animals/type' do
 end
 
 post '/animals' do
+  puts(params)
   @animal = Animal.new(params)
   @animal.save()
   erb(:"animals/create")
