@@ -1,16 +1,16 @@
-<h3><a href="/animals">Home page</a></h3>
+<h3>Adoptions information</h3>
 
-
-<h2>Animal Success Stories</h2>
-
-<% @animals.each() do |animal| if animal.adoption_case == "Yes" && animal.owner.name != "Edinburgh Animal Sanctuary" %>
 <div>
- <h3><%= animal.name %></h3>
- <img src="<%= animal.image_url %>"  />
- <p> <%= animal.name  %> was adopted by <%= animal.owner.name %> in <%=animal.adoption_date %></p> 
-</div>
+  <ul class="animal-with-image">
 
-<hr/>
+    <% @animals.each() do |animal| if animal.adoption_case == "Yes" && animal.owner.name != "Edinburgh Animal Sanctuary" %>
+    <li id="animal-name"><%= animal.name %></li>
+    <hr/>
+    <li><img src="<%= animal.image_url %>" /></li>
+    <hr/>
+    <li> <%= animal.name  %> was adopted by <%= animal.owner.name %> in <%=animal.adoption_date %></li> 
+    <% end %>
+    <%end%>
+
+  </ul>
 </div>
-<% end %>
-<%end%>

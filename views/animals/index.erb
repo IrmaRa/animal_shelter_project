@@ -1,22 +1,21 @@
 <div>
-<ul class="nav-bars">
-<li><a href="/animals/ready">Animals ready for adoption</a></li>
-<li><a href="/animals/unready">Animals in training/vet care</a></li>
-<li><a href="/animals/stories">Success Stories</a></li>  
-<li><a href="/animals/new">Add animal</a></li> 
-<li>
-  <form id="search-field" method="get" action="/animals/type" />
-  <label for="search-field">Search by type:</label>
-  <select name="type" id="type-selection"/>
-    <option value="Dog">Dog</option>
-    <option value="Cat">Cat</option>
-  </select>
-  <input type="submit" value="Search"></li>
-</ul>
+  <ul class="nav-bars">
+    <li><a href="/animals/ready">Animals ready for adoption</a></li>
+    <li><a href="/animals/unready">Animals in training/vet care</a></li>
+    <li><a href="/animals/stories">Success Stories</a></li>  
+    <li><a href="/animals/new">Add animal</a></li> 
+    <li>
+      <form id="search-field" method="get" action="/animals/type" />
+      <label for="search-field">Search by type:</label>
+      <select name="type" id="type-selection"/>
+      <option value="Dog">Dog</option>
+      <option value="Cat">Cat</option>
+    </select>
+    <input type="submit" value="Search"></li>
+  </ul>
 </div>
 
 <h3>All animals</h3>
-
 
 <div> <% @animals.each do |animal| %>
  <ul  class="animal-with-image">
@@ -26,10 +25,8 @@
    <hr/>
    <li>Admission Date: <%= animal.admission_date %> </li> 
    <li><a id="more-details" href="/animals/<%= animal.id %>">More details</a></li>
-   </ul>
- </div>
+ </ul>
 
-
- <% end %>
+<% end %>
 
 </div>
