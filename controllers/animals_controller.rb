@@ -8,9 +8,9 @@ get '/animals/new' do
   erb(:"animals/new")
 end
 
-get '/animals/stories' do
+get '/animals/adopted' do
   @animals = Animal.all()
-  erb(:"animals/stories")
+  erb(:"animals/adopted")
 end
 
 get '/animals/ready' do

@@ -1,4 +1,26 @@
-.edit-delete input{
+.inline-updated a {
+  list-style: none;
+  background-color: #fff2e6;
+  font-family: "Didot";
+  font-weight: lighter;
+  text-decoration: none;
+  color: black;
+  font-size: 150%;
+  font-style: italic;
+}
+
+.inline-updated {
+  text-align: center;
+  display: inline;
+  list-style: none;
+}
+
+.create-view li {
+  list-style: none;
+  text-align: center;
+}
+
+.edit-delete input {
   background-color: white;
   display: inline-block;
   font-size:70%;
@@ -7,4 +29,4 @@
 
 .edit-delete {
   display: inline-block;
-}
+  }

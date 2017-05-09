@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Didot|Open+Sans|Roboto:100');
+
+#add-owner {
+  text-align: left;
+}
+
+#owners-title {
+  text-align: left;
+}
+
+#add-owner a {
+  text-decoration: none;
+  background-color: #333333;
+  font-family: "Roboto";
+  font-weight: lighter;
+  color: white;
+  font-size: 180%;
+  padding: 0.3em;
+}
+
+.owners-list {
+  width: 35%;
+  list-style: none;
+  border: outset;
+  padding: 1em;
+}
+
+.owners-list li {
+  font-family: "Didot";
+  font-size: 130%;
+  font-style: italic;
+}
+
+#owner-name {
+  font-size: 180%;
+}
+
+#owner-edit {
+  list-style: none;
+  padding: 0 0 3em 0;
+}

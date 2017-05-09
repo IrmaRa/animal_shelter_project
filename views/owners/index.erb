@@ -1,26 +1,33 @@
-<h1 class="page-title">List of Owners</h1>
+<div>
+  <ul id="add-owner">
+    <a href="/owners/new">Add Owner</a>
+    <h3 id="owners-title">List of Owners</h3>
+  </ul>
+</div>
 
-<div> 
 
-  <% @owners.each do |owner| if owner.name != "Edinburgh Animal Sanctuary"%>
-  <p>Name: <%= owner.name %></p>
-  <p>Animal preferences: <%= owner.preferences %></p> 
-  <p>Current number of pets: <%= owner.animals.count %></p> 
-  <form action="/owners/<%= owner.id %>/edit" method="get">
-   <input type="submit" value="edit">
- </form>
- <form action="/owners/<%= owner.id %>/delete" method="post">
-   <input type="submit" value="delete">
- </form>
- <% end %>
- <% end %>
+<div>
+<% @owners.each do |owner| if owner.name != "Edinburgh Animal Sanctuary"%>
+  <ul class="owners-list">
 
+    <li id="owner-name">Name:<%= owner.name %></li>
+    <li>Animal preferences: <%= owner.preferences %></li> 
+    <li>Current number of pets: <%= owner.animals.count %></li> 
+
+  </ul>
 </div>
 
 <div>
-<ul>
-<li><a href="/owners/new">Add owner</a></li>
-</ul>
+  <ul id="owner-edit">
+
+    <li><form class="edit-delete" action="/owners/<%= owner.id %>/edit" method="get">
+     <input type="submit" value="edit">
+   </form>
+   <form class="edit-delete" action="/owners/<%= owner.id %>/delete" method="post">
+     <input type="submit" value="delete">
+   </form></li>
+
+ </ul>
+ <% end %>
+ <% end %>
 </div>
-
-

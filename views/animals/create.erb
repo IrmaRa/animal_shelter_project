@@ -1,2 +1,9 @@
-<img src="<%= @animal.image_url %>" />
-<p><%= @animal.name%> has been added.</p>
+
+
+<div>
+  <ul class="create-view">
+    <li><h2><%= @animal.name.capitalize%> has been added.</h2></li>
+
+    <li><img src="<%= @animal.image_url %>" /></li>
+  </ul>
+</div>
