@@ -25,29 +25,34 @@ owner4 = Owner.new({
   })
 
 owner5 = Owner.new({
-  'name' => 'Tom Jerry',
+  'name' => 'Liam Mcdonald',
   'preferences' => 'Looking for a large size dog'
   })
 
+owner6 = Owner.new({
+  'name' => 'Caroline Holmes',
+  'preferences' => 'Looking for a small size dog'
+  })
 
 owner1.save()
 owner2.save()
 owner3.save()
 owner4.save()
 owner5.save()
+owner6.save()
 
 
 animal1 = Animal.new({
-  'name' => 'Alfie',
+  'name' => 'Dollar',
   'type' => 'Dog',
-  'breed' => 'X Terrier',
+  'breed' => 'Boxer',
   'sex' => 'Male',
-  'age' => '10 months',
-  'image_url' => '/images/myths-about-rescue-dogs.jpg',
-  'admission_date' => '2017-02-12',
-  'adoption_case' => "Yes",
-  'adoption_date' => '2017-05-07',
-  'owner_id' => owner2.id
+  'age' => '5 months',
+  'image_url' => '/images/StockSnap_OOH59BAHBL.jpg',
+  'admission_date' => '2017-04-10',
+  'adoption_case' => "No",
+  'adoption_date' => '2017-04-10',
+  'owner_id' => owner1.id
 })
 
 animal2 = Animal.new({
@@ -64,15 +69,15 @@ animal2 = Animal.new({
 })
 
 animal3 = Animal.new({
-  'name' => 'Scooby',
+  'name' => 'Biscuit',
   'type' => 'Dog',
-  'breed' => 'X Labrador/Mastiff',
+  'breed' => 'French Bulldog',
   'sex' => 'Male',
-  'age' => '7 years',
-  'image_url' => '/images/1546975_7uGP9J.jpeg',
-  'admission_date' => '2017-03-10',
+  'age' => '2 years',
+  'image_url' => '/images/StockSnap_C8WJDJA390.jpg',
+  'admission_date' => '2017-05-09',
   'adoption_case' => "Yes",
-  'adoption_date' => '2017-03-10',
+  'adoption_date' => '2017-05-09',
   'owner_id' => owner1.id
 })
 
@@ -89,10 +94,38 @@ animal4 = Animal.new({
   'owner_id' => owner1.id
 })
 
+animal5 = Animal.new({
+  'name' => 'Alfie',
+  'type' => 'Dog',
+  'breed' => 'X Terrier',
+  'sex' => 'Male',
+  'age' => '10 months',
+  'image_url' => '/images/myths-about-rescue-dogs.jpg',
+  'admission_date' => '2017-02-12',
+  'adoption_case' => "Yes",
+  'adoption_date' => '2017-05-07',
+  'owner_id' => owner2.id
+})
+
+animal6 = Animal.new({
+  'name' => 'Scooby',
+  'type' => 'Dog',
+  'breed' => 'X Labrador/Mastiff',
+  'sex' => 'Male',
+  'age' => '7 years',
+  'image_url' => '/images/1546975_7uGP9J.jpeg',
+  'admission_date' => '2017-03-10',
+  'adoption_case' => "Yes",
+  'adoption_date' => '2017-03-10',
+  'owner_id' => owner1.id
+})
+
 animal1.save()
 animal2.save()
 animal3.save()
 animal4.save()
+animal5.save()
+animal6.save()
 
 binding.pry
 nil
