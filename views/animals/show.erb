@@ -1,20 +1,31 @@
-<div id="center-show">
-<ul class="animal-with-image">
- <li id="animal-name"><%= @animal.name %></li>
- <li>Admission Date: <%= @animal.admission_date %></li> 
- <li>Breed: <%= @animal.breed.capitalize %></li>  
- <li>Age: <%= @animal.age %> </li>
- <li>Sex: <%= @animal.sex %> </li>
- <li>Ready for adoption: <%= @animal.adoption_case %></li> 
- <li>Current owner: <%= @animal.owner.name  %></li> 
- <hr/>
- <li><img id="show-image" src="<%= @animal.image_url %>" /></li>
- <hr/>
- <li><form class="edit-delete" action="/animals/<%= @animal.id %>/edit" method="get">
- <input type="submit" value="edit">
- </form >
- <form class="edit-delete" action="/animals/<%= @animal.id %>/delete" method="post">
- <input type="submit" value="delete">
- </form></li>
-</ul>
+<main>
+  <section id="animal-list">
+
+    <figure class="animal-with-image">
+    <div class="edit-animal">
+    <div class="edit-animal-info">
+     <h4><%= @animal.name %></h4>
+     <img src="<%= @animal.image_url %>" />
+     </div>
+     <div class="edit-animal-change">
+     <ol id="animal-details">
+       <li>Admission Date: <%= @animal.admission_date %></li> 
+       <li>Breed: <%= @animal.breed.capitalize %></li>  
+       <li>Age: <%= @animal.age %> </li>
+       <li>Sex: <%= @animal.sex %> </li>
+       <li>Ready for adoption: <%= @animal.adoption_case %></li> 
+       <li>Current owner: <%= @animal.owner.name  %></li> 
+      </ol>
+      <ul id="animal-info">
+       <li><a href="/animals/<%= @animal.id %>/edit" >Edit
+         </a></li>
+       <li><a href="/animals/<%= @animal.id %>/delete">Delete
+         </a></li>
+     </ul>
+     </div>
 </div>
+   </figure>
+
+ </section>
+</main>
+

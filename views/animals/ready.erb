@@ -1,16 +1,19 @@
+<manin>
+  <section id="animal-list">
 
-<div> <% @animals.each do |animal|  %>
+    <% @animals.each do |animal|  %>
 
-  <ul class="animal-with-image">
-   <li id="animal-name"><%= animal.name %></li>
-   <hr/>
-   <li><img src="<%= animal.image_url %>" /></li>
-   <hr/>
-   <li>Breed: <%= animal.breed %> </li>  
-   <li>Age: <%= animal.age %> </li>
-   <li>Sex: <%= animal.sex %> </li> 
-   <li>Admission Date: <%= animal.admission_date %> </li> 
- </ul>
- <% end %>
+    <figure class="animal-with-image">
+     <h4><%= animal.name %></h4>
+     <img src="<%= animal.image_url %>" />
+     <ul>
+       <li>Breed: <%= animal.breed %> </li>  
+       <li>Age: <%= animal.age %> </li>
+       <li>Sex: <%= animal.sex %> </li> 
+       <li>Admission Date: <%= animal.admission_date %> </li> 
+     </ul>
+   </figure>
+   <% end %>
 
-</div>
+ </section>
+</manin>

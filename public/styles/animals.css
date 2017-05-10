@@ -1,6 +1,9 @@
 
 .nav-bars {
-  text-align: center
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 0.3em 0 0;
 }
 
 .nav-bars form {
@@ -46,23 +49,37 @@ img {
   height: 350px;
 }
 
+#animal-list  {
+  width: 100vw;
+  display: flex;
+  flex-flow: row wrap;  
+  justify-content: center;
+}
 .animal-with-image {
+  padding: 0 0.2em 0 0.2em;
   text-align: center;
-  width: 45%;
   list-style: none;
-  display: inline-block;
 }
 
-#animal-name {
-  font-size: 180%;
-}
-
-.animal-with-image li {
+.animal-with-image {
+  margin: 0;
   font-family: "Didot";
   font-size: 130%;
   font-style: italic;
 }
-
+.animal-with-image h4 {
+  font-size: 1.2em;
+  border-bottom: 1px solid #666;
+  padding: 0 0 0.5em 0;
+}
+.animal-with-image ul {
+  list-style-type: none;
+  border-top: 1px solid #666;
+  padding: 0.5em 0 0 0;
+}
+.animal-with-image ul li {
+  margin: 0.5em 0 0 0;
+}
 .animal-with-image a {
   font-family: "Roboto";
   font-style: normal;

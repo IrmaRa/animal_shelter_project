@@ -13,19 +13,22 @@
     <input type="submit" value="Search"></li>
   </ul>
 </div>
+<main>
 
 <h3>All animals</h3>
 
-<div> <% @animals.each do |animal| %>
- <ul  class="animal-with-image">
-   <li id="animal-name"><%= animal.name.capitalize %></li>
-   <hr/>
-   <li><img src="<%= animal.image_url %>"/></li>
-   <hr/>
-   <li>Admission Date: <%= animal.admission_date %> </li> 
-   <li><a id="more-details" href="/animals/<%= animal.id %>">More details</a></li>
- </ul>
+<section id="animal-list">
 
+ <% @animals.each do |animal| %>
+ <figure class="animal-with-image">
+  <h4><%= animal.name.capitalize %></h4>
+  <img src="<%= animal.image_url %>" alt="Photograph of <%= animal.name.capitalize %>" />
+  <ul>
+    <li>Admission Date: <%= animal.admission_date %> </li>
+    <li><a href="/animals/<%= animal.id %>">More details</a></li>
+  </ul>
+ </figure>
 <% end %>
 
-</div>
+</section>
+</main>

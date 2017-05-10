@@ -20,24 +20,36 @@
   list-style: none;
   text-align: center;
 }
+#animal-details {
+  list-style-type: none;
+}
 
-.edit-delete input {
-  background-color: white;
+#animal-info  {
+  list-style-type: none;  
+}
+
+#animal-info li  {
   display: inline-block;
+  padding: 10px 0;
+}
+
+#animal-info a {
+  width: 150px;
+  display: block;
+  color: #000;
+  background-color: white;
+  border: 1px solid #666;
   font-size:70%;
-  padding: 16px 32px;
+  padding: 10px;
+  margin: 0 10px 10px 10px;
+}
+
+#animal-info a:hover {
+  background-color: #ededed;
+  color: blue;
 }
 
 .edit-delete {
   display: inline-block;
-  }
+}
 
-  #center-show {
-    text-align: center;
-  }
-
-  #center-show ul {
-    padding: 0;
-    list-style-type: none;
-  }
-  
