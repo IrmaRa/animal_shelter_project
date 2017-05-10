@@ -11,8 +11,7 @@ h2 {
 .add-new form {
   font-family: "Roboto";
   width: 30%;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   color: black;
   display: list-item;
   border: double;
