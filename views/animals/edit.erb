@@ -1,89 +1,89 @@
 <h2>Change animal details</h2>
 
 <div>
-<ul class="add-new">
-<form method="post" action="/animals/<%= @animal.id %>">
+  <ul class="add-new">
+    <form method="post" action="/animals/<%= @animal.id %>">
 
-  <li><label for="name-field">Name:</label> 
-  <input
-  type="text"
-  name="name"
-  id="name-field"
-  value="<%= @animal.name %>"
-  /></li>
+      <li><label for="name-field">Name:</label> 
+        <input
+        type="text"
+        name="name"
+        id="name-field"
+        value="<%= @animal.name %>"
+        /></li>
 
-  <li><label for="type-field">Type:</label> 
-  <select name="type" id="type-selection">
-   <option value="Dog" <%= 'selected' if @animal.type == "Dog"%>> Dog</option>
-   <option value="Cat" <%= 'selected' if @animal.type == "Cat"%>> Cat</option>
- </select></li>
+        <li><label for="type-field">Type:</label> 
+          <select name="type" id="type-selection">
+           <option value="Dog" <%= 'selected' if @animal.type == "Dog"%>> Dog</option>
+           <option value="Cat" <%= 'selected' if @animal.type == "Cat"%>> Cat</option>
+         </select></li>
 
- <li><label for="breed-field">Breed:</label>
- <input
- type="text"
- name="breed"
- id="breed-field"
- value="<%= @animal.breed %>"
- /></li>
+         <li><label for="breed-field">Breed:</label>
+           <input
+           type="text"
+           name="breed"
+           id="breed-field"
+           value="<%= @animal.breed %>"
+           /></li>
 
- <li><label for="sex-selection">Select sex:</label>
- <select name="sex" id="sex-selection">
-   <option value="Male" <%= 'selected' if @animal.sex == "Male"%>> Male</option>
-   <option value="Female" <%= 'selected' if @animal.sex == "Female"%>> Female</option>
- </select></li>
+           <li><label for="sex-selection">Select sex:</label>
+             <select name="sex" id="sex-selection">
+               <option value="Male" <%= 'selected' if @animal.sex == "Male"%>> Male</option>
+               <option value="Female" <%= 'selected' if @animal.sex == "Female"%>> Female</option>
+             </select></li>
 
- <li><label for="age-field">Age:</label>
- <input 
- type="text" 
- name="age" 
- id="age-field"
- value="<%= @animal.age %>"
- /></li>
+             <li><label for="age-field">Age:</label>
+               <input 
+               type="text" 
+               name="age" 
+               id="age-field"
+               value="<%= @animal.age %>"
+               /></li>
 
- <li><label for="image-url-field">Image Url:</label>
- <input 
- type="text" 
- name="image_url" 
- id="image-url-field"
- value="<%= @animal.image_url %>"
- /></li>
+               <li><label for="image-url-field">Image Url:</label>
+                 <input 
+                 type="text" 
+                 name="image_url" 
+                 id="image-url-field"
+                 value="<%= @animal.image_url %>"
+                 /></li>
 
- <li><label for="admission-date-field">Admission Date:</label>
- <input 
- type="date" 
- name="admission_date" 
- id="admission-date-field"
- value="<%= @animal.admission_date %>"
- /></li>
+                 <li><label for="admission-date-field">Admission Date:</label>
+                   <input 
+                   type="date" 
+                   name="admission_date" 
+                   id="admission-date-field"
+                   value="<%= @animal.admission_date %>"
+                   /></li>
 
- <li><label for="adoption-selection">Is it currently adoptable?</label>
- <select name="adoption_case" id="adoption-selection">
-   <option value="Yes" <%= 'selected' if @animal.adoption_case == "Yes"%>> Yes</option>
-   <option value="No" <%= 'selected' if @animal.adoption_case == "No"%>> No</option>
- </select></li>
+                   <li><label for="adoption-selection">Is it currently adoptable?</label>
+                     <select name="adoption_case" id="adoption-selection">
+                       <option value="Yes" <%= 'selected' if @animal.adoption_case == "Yes"%>> Yes</option>
+                       <option value="No" <%= 'selected' if @animal.adoption_case == "No"%>> No</option>
+                     </select></li>
 
- <li><label for="owner-select">Select Potential Owner:</label>
- <select id="owner-select" name ="owner_id">
-   <% @owners.each do |owner| %>
-   <option value=<%=owner.id%> <%= 'selected' if @animal.owner_id == owner.name %>>
-     <%=owner.name%> |
-     <%=owner.preferences%> |
-     <%=owner.animals.count%>
-   </option>
-   <%end%>
- </select></li>
+                     <li><label for="owner-select">Select Potential Owner:</label>
+                       <select id="owner-select" name ="owner_id">
+                         <% @owners.each do |owner| %>
+                         <option value=<%=owner.id%> <%= 'selected' if @animal.owner_id == owner.name %>>
+                           <%=owner.name%> |
+                           <%=owner.preferences%> |
+                           <%=owner.animals.count%>
+                         </option>
+                         <%end%>
+                       </select></li>
 
- <li><label for="adoption-date-field">Adoption Date:</label>
- <input 
- type="date" 
- name="adoption_date" 
- id="adoption-date-field"
- value="<%= @animal.adoption_date %>"
- /></li>
+                       <li><label for="adoption-date-field">Adoption Date:</label>
+                         <input 
+                         type="date" 
+                         name="adoption_date" 
+                         id="adoption-date-field"
+                         value="<%= @animal.adoption_date %>"
+                         /></li>
 
- <li><input type="submit" value="Update"></li>
+                         <li><input type="submit" value="Update"></li>
 
-</form>
+                       </form>
 
-</ul>
-</div>
+                     </ul>
+                   </div>

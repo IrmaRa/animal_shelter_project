@@ -1,4 +1,4 @@
-
+ 
 .nav-bars {
   display: flex;
   flex-wrap: wrap;
@@ -44,17 +44,23 @@ h3 {
   padding: 0.5em 0 0 0;
 }
 
+h4 {
+  font-size: 130%;
+}
+
 img {
   width: 450px;
   height: 350px;
 }
 
-#animal-list  {
+
+#animal-list {
   width: 100vw;
   display: flex;
   flex-flow: row wrap;  
   justify-content: center;
 }
+
 .animal-with-image {
   padding: 0 0.2em 0 0.2em;
   text-align: center;
@@ -66,11 +72,6 @@ img {
   font-family: "Didot";
   font-size: 130%;
   font-style: italic;
-}
-.animal-with-image h4 {
-  font-size: 1.2em;
-  border-bottom: 1px solid #666;
-  padding: 0 0 0.5em 0;
 }
 .animal-with-image ul {
   list-style-type: none;

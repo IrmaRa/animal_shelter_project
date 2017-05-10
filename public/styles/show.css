@@ -20,18 +20,17 @@
   list-style: none;
   text-align: center;
 }
+
 #animal-details {
   list-style-type: none;
 }
 
-#edit-delete-links  {
-  list-style-type: none;
-
+#edit-delete-links {
+padding: 0 0 2em 0;
 }
 
-#edit-delete-links li  {
+#edit-delete-links li {
   display: inline-block;
-  padding: 10px 0;
 }
 
 #edit-delete-links a {
@@ -53,5 +52,4 @@
   background-color: #ededed;
   color: blue;
 }
-
 

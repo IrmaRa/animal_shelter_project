@@ -1,79 +1,80 @@
 <h2>Add a new animal</h2>
 
 <div>
-<ul class="add-new">
-<form method="post" action="/animals">
+  <ul class="add-new">
 
-  <li><label for="name-field">Name:</label> 
-  <input
-  type="text"
-  name="name"
-  id="name-field"
-  /></li>
+    <form method="post" action="/animals">
 
-  <li><label for="type-field">Type:</label> 
-  <select name="type" id="type-selection">
-   <option value="Dog">Dog</option>
-   <option value="Cat">Cat</option>
- </select></li>
+      <li><label for="name-field">Name:</label> 
+        <input
+        type="text"
+        name="name"
+        id="name-field"
+        /></li>
 
- <li><label for="breed-field">Breed:</label> 
- <input
- type="text"
- name="breed"
- id="breed-field"
- /></li>
+        <li><label for="type-field">Type:</label> 
+          <select name="type" id="type-selection">
+           <option value="Dog">Dog</option>
+           <option value="Cat">Cat</option>
+         </select></li>
 
- <li><label for="sex-selection">Sex:</label>
- <select name="sex" id="sex-selection">
-   <option value="Male">Male</option>
-   <option value="Female">Female</option>
- </select></li>
+         <li><label for="breed-field">Breed:</label> 
+           <input
+           type="text"
+           name="breed"
+           id="breed-field"
+           /></li>
 
- <li><label for="age-field">Age:</label>
- <input 
- type="text" 
- name="age" 
- id="age-field"
- /></li>
+           <li><label for="sex-selection">Sex:</label>
+             <select name="sex" id="sex-selection">
+               <option value="Male">Male</option>
+               <option value="Female">Female</option>
+             </select></li>
 
- <li><label for="image-url-field">Image Url:</label>
- <input 
- type="text" 
- name="image_url" 
- id="image-url-field"
- /></li>
+             <li><label for="age-field">Age:</label>
+               <input 
+               type="text" 
+               name="age" 
+               id="age-field"
+               /></li>
 
- <li><label for="admission-date-field">Admission date:</label>
- <input 
- type="date" 
- name="admission_date" 
- id="admission-date-field"
- /></li>
+               <li><label for="image-url-field">Image Url:</label>
+                 <input 
+                 type="text" 
+                 name="image_url" 
+                 id="image-url-field"
+                 /></li>
 
- <li><label for="adoption-selection">Is it currently adoptable?</label>
- <select name="adoption_case" id="adoption-selection">
-   <option value="Yes">Yes</option>
-   <option value="No">No</option>
- </select></li>
+                 <li><label for="admission-date-field">Admission date:</label>
+                   <input 
+                   type="date" 
+                   name="admission_date" 
+                   id="admission-date-field"
+                   /></li>
 
- <li><label for="owner-select">Select Potential Owner:</label>
- <select id="owner-select" name ="owner_id">
-  <% @owners.each do |owner| %>
-  <option value=<%=owner.id%> >
-    <%=owner.name%> |
-    <%=owner.preferences%> |
-    <%=owner.animals.count%>
-  </option>
-  <%end%>
-</select></li>
+                   <li><label for="adoption-selection">Is it currently adoptable?</label>
+                     <select name="adoption_case" id="adoption-selection">
+                       <option value="Yes">Yes</option>
+                       <option value="No">No</option>
+                     </select></li>
 
-<li><label for="adoption-date-field">Adoption date:</label>
-<input type="date" name="adoption_date" id="adoption-date-field"/></li>
+                     <li><label for="owner-select">Select Potential Owner:</label>
+                       <select id="owner-select" name ="owner_id">
+                        <% @owners.each do |owner| %>
+                        <option value=<%=owner.id%> >
+                          <%=owner.name%> |
+                          <%=owner.preferences%> |
+                          <%=owner.animals.count%>
+                        </option>
+                        <%end%>
+                      </select></li>
 
-<li><input type="submit" value="Add animal"></li>
+                      <li><label for="adoption-date-field">Adoption date:</label>
+                        <input type="date" name="adoption_date" id="adoption-date-field"/></li>
 
-</form>
+                        <li><input type="submit" value="Add animal"></li>
 
-</ul>
-</div>
+                      </form>
+
+                    </ul>
+                  </div>
