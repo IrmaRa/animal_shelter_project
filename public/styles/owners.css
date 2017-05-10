@@ -17,6 +17,11 @@
   padding: 0.3em;
 }
 
+#add-owner a:hover {
+  background-color: white;
+  color: #333333;
+}
+
 .owners-list {
   width: 45%;
   list-style: none;

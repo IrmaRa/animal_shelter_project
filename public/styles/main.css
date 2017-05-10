@@ -40,3 +40,8 @@ header {
   color: black;
   font-size: 200%;
 }
+
+.main-navigation a:hover {
+  background-color: #333333;
+  color: #fff2e6;
+}

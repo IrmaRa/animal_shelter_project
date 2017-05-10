@@ -27,12 +27,32 @@
   padding: 0.3em;
 }
 
+.nav-bars a:hover {
+  background-color: white;
+  color: #333333;
+}
+
 .search-field {
   background-color: white;
 }
 
 .search-font {
   color: black;
+}
+
+.search-field input {
+  width: 60px;
+  background-color: white;
+  border: 1px solid #666;
+  font-size:60%;
+  text-decoration: none;
+  font-family: "Roboto";
+  font-size: 90%;
+}
+
+.search-field input:hover {
+  background-color: #333333;
+  color: white;
 }
 
 h3 {
@@ -89,4 +109,9 @@ img {
   font-size: 80%;
   background-color: #333333;
   padding: 0.3em;
+}
+
+.animal-with-image a:hover {
+  background-color: white;
+  color: #333333;
 }
