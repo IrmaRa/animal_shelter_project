@@ -5,29 +5,25 @@
   </ul>
 </div>
 
-
 <div>
-<% @owners.each do |owner| if owner.name != "Edinburgh Animal Sanctuary"%>
+  <% @owners.each do |owner| if owner.name != "Edinburgh Animal Sanctuary"%>
   <ul class="owners-list">
 
     <li id="owner-name">Name:<%= owner.name %></li>
     <li>Animal preferences: <%= owner.preferences %></li> 
     <li>Current number of pets: <%= owner.animals.count %></li> 
+  </ul>
+
+  <ul id="edit-delete-links">
+
+    <li><a href="/owners/<%= owner.id %>/edit" >Edit 
+    </a></li>
+    <li><a href="/owners/<%= owner.id %>/delete" >Delete 
+    </a></li>
 
   </ul>
+  
 </div>
 
-<div>
-  <ul id="owner-edit">
-
-    <li><form class="edit-delete" action="/owners/<%= owner.id %>/edit" method="get">
-     <input type="submit" value="edit">
-   </form>
-   <form class="edit-delete" action="/owners/<%= owner.id %>/delete" method="post">
-     <input type="submit" value="delete">
-   </form></li>
-
- </ul>
- <% end %>
- <% end %>
-</div>
+<% end %>
+<% end %>

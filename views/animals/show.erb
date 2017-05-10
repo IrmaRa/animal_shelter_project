@@ -16,7 +16,7 @@
        <li>Ready for adoption: <%= @animal.adoption_case %></li> 
        <li>Current owner: <%= @animal.owner.name  %></li> 
       </ol>
-      <ul id="animal-info">
+      <ul id="edit-delete-links">
        <li><a href="/animals/<%= @animal.id %>/edit" >Edit
          </a></li>
        <li><a href="/animals/<%= @animal.id %>/delete">Delete

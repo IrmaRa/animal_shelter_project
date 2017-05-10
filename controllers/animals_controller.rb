@@ -52,9 +52,8 @@ post '/animals/:id' do
   erb(:"animals/update")
 end
 
-post '/animals/:id/delete' do
+get '/animals/:id/delete' do
   animal = Animal.find(params[:id])
   animal.delete()
   redirect to '/animals'
 end
-

@@ -34,7 +34,7 @@ post '/owners/:id' do
   redirect to '/owners'
 end
 
-post '/owners/:id/delete' do
+get '/owners/:id/delete' do
   owner = Owner.find(params[:id])
   owner.delete()
   redirect to '/owners'
