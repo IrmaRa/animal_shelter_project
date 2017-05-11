@@ -85,22 +85,22 @@ img {
   padding: 0 0.2em 0 0.2em;
   text-align: center;
   list-style: none;
-}
-
-.animal-with-image {
   margin: 0;
   font-family: "Didot";
   font-size: 130%;
   font-style: italic;
 }
+
 .animal-with-image ul {
   list-style-type: none;
   border-top: 1px solid #666;
   padding: 0.5em 0 0 0;
 }
-.animal-with-image ul li {
+
+.animal-with-image li {
   margin: 0.5em 0 0 0;
 }
+
 .animal-with-image a {
   font-family: "Roboto";
   font-style: normal;

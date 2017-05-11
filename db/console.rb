@@ -43,12 +43,12 @@ owner6.save()
 
 
 animal1 = Animal.new({
-  'name' => 'Dollar',
+  'name' => 'Spike',
   'type' => 'Dog',
-  'breed' => 'Boxer',
+  'breed' => 'X terrier',
   'sex' => 'Male',
-  'age' => '5 months',
-  'image_url' => '/images/StockSnap_OOH59BAHBL.jpg',
+  'age' => '3 years',
+  'image_url' => '/images/StockSnap_AGEZT9FSY0.jpg',
   'admission_date' => '2017-04-10',
   'adoption_case' => "No",
   'adoption_date' => '2017-04-10',
@@ -63,7 +63,7 @@ animal2 = Animal.new({
   'age' => '3 years',
   'image_url' => '/images/155293403-cat-adoption-checklist-632x475-e1354290788940.jpg',
   'admission_date' => '2017-04-01',
-  'adoption_case' => "No",
+  'adoption_case' => "Yes",
   'adoption_date' => '2017-04-01',
   'owner_id' => owner1.id
 })
@@ -76,7 +76,7 @@ animal3 = Animal.new({
   'age' => '2 years',
   'image_url' => '/images/StockSnap_C8WJDJA390.jpg',
   'admission_date' => '2017-05-09',
-  'adoption_case' => "Yes",
+  'adoption_case' => "No",
   'adoption_date' => '2017-05-09',
   'owner_id' => owner1.id
 })
@@ -89,7 +89,7 @@ animal4 = Animal.new({
   'age' => '4 months',
   'image_url' => '/images/01-cat-wants-to-tell-you-laptop.jpg',
   'admission_date' => '2017-05-02',
-  'adoption_case' => "Yes",
+  'adoption_case' => "No",
   'adoption_date' => '2017-05-02',
   'owner_id' => owner1.id
 })
